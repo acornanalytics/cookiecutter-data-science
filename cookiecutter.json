@@ -1,0 +1,9 @@
+{
+  "project_name": "project_name",
+  "repo_name": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
+  "description": "A repo for the project {{ cookiecutter.project_name }}.",
+  "author_name": "Your name (or your organization/company/team)",
+  "author_email": "yourname@example.com",
+  "open_source_license": ["MIT", "BSD-3-Clause", "No license file"],
+  "source_code_directory_name": ["src", "{{ cookiecutter.project_name.lower().replace(' ', '_') }}"]
+}

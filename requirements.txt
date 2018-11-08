@@ -1,0 +1,17 @@
+arrow==0.12.1
+binaryornot==0.4.4
+certifi==2018.10.15
+chardet==3.0.4
+Click==7.0
+cookiecutter==1.6.0
+future==0.17.1
+idna==2.7
+Jinja2==2.10
+jinja2-time==0.2.0
+MarkupSafe==1.1.0
+poyo==0.4.2
+python-dateutil==2.7.5
+requests==2.20.1
+six==1.11.0
+urllib3==1.24.1
+whichcraft==0.5.2
