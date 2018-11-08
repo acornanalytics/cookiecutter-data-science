@@ -16,17 +16,16 @@ Project based on the <a href="https://drivendata.github.io/cookiecutter-data-sci
     │   ├── processed      <- The final, canonical data sets for modeling
     │   └── raw            <- The original, immutable data dump
     │
-    │
     ├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
     │                         the creator's initials, and a short `-` delimited description, e.g.
-    │                         `{% now 'local', '%Y-%m-%d' %}-jqp-initial-data-exploration`
+    │                         `2018-11-08-jqp-initial-data-exploration`
     │
     ├── references         <- Data dictionaries, manuals, and all other explanatory materials
     │
     ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
     │                         generated with `pip freeze > requirements.txt`
     │
-    └── {{ cookiecutter.source_code_directory_name }}                <- Source code directory for the project
+    └── src                <- Source code directory for the project
          ├─ __init__.py    <- Makes this src directory a Python module
          ├─ core.py        <- Refactored code goes here
          └─ utils.py       <- Where to store helper functions that do not belong in `core.py`
