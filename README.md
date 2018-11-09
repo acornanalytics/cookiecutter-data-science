@@ -44,4 +44,9 @@ Project based on the <a href="https://drivendata.github.io/cookiecutter-data-sci
 To contribute there are some things you need to do to get your environment set up.
 
 - clone this repo
-- `virtualenv --python=/usr/local/bin/python3 venv`
+- run `virtualenv --python=/usr/local/bin/python3 venv`
+
+
+## TODOs
+
+- Add notes about what is different than the original project by DrivenData
