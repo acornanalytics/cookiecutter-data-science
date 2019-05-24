@@ -14,4 +14,4 @@ python-dateutil==2.7.5
 requests==2.20.1
 six==1.11.0
 urllib3>=1.24.2
-Whichcraft==0.5.2
+whichcraft==0.5.2
