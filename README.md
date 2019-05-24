@@ -28,7 +28,7 @@ Project based on the <a href="https://drivendata.github.io/cookiecutter-data-sci
     └── src                <- Source code directory for the project
          ├─ __init__.py    <- Makes this src directory a Python module
          ├─ core.py        <- Refactored code goes here
-         └─ utils.py       <- Where to store helper functions that do not belong in `core.py`
+         └─ utils.py       <- Helper functions that do not belong in `core.py`
 ```
 
 ## How to Use This Cookiecutter
