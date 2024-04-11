@@ -5,7 +5,7 @@ chardet==3.0.4
 Click==7.0
 cookiecutter==2.1.1
 future==0.18.3
-idna==2.7
+idna==3.7
 Jinja2>=2.10.1
 jinja2-time==0.2.0
 MarkupSafe==1.1.0
