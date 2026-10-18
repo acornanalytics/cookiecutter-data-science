@@ -6,7 +6,7 @@ The following is a set of guidelines for contributing to cookiecutter-data-scien
 
 ## Did you find an issue?
 
-1. **Ensure the issue was not already reported** by searching on GitHub under [Issues](https://github.com/freetype/cookiecutter-data-science/issues).
+1. **Ensure the issue was not already reported** by searching on GitHub under [Issues](https://github.com/acornanalytics/cookiecutter-data-science/issues).
 2. If you're unable to find an open issue addressing the problem, create a new issue. Be sure to include a title and clear description, as much relevant information as possible, and a code sample or an executable test case demonstrating the expected behavior that is not occurring.
 
 Issues to submit include:
