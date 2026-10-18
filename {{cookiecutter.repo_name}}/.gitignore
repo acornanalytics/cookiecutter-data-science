@@ -33,8 +33,14 @@ var/
 # Pycharm
 .idea
 
-# JSON files such as GCP api keys
-*.json
+# Credentials such as GCP api keys
+*credentials*.json
+*service-account*.json
+client_secret*.json
+
+# Test / lint caches
+.pytest_cache/
+.ruff_cache/
 
 # Jupyter NB Checkpoints
 .ipynb_checkpoints/
