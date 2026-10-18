@@ -3,7 +3,7 @@
 """
 core.py
 
-Created on `{% now 'local', '%Y-%m-%d' %}
+Created on {% now 'local', '%Y-%m-%d' %}
 by {{ cookiecutter.author_name }}
 {{ cookiecutter.author_email }}
 """

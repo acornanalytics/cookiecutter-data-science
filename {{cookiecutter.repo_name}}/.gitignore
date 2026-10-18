@@ -38,3 +38,10 @@ var/
 
 # Jupyter NB Checkpoints
 .ipynb_checkpoints/
+
+
+# uv / virtualenv
+.venv/
+
+# Session scratch state
+handoffs/

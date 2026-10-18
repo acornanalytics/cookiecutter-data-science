@@ -22,8 +22,7 @@ Project based on the <a href="https://drivendata.github.io/cookiecutter-data-sci
     │
     ├── references         <- Data dictionaries, manuals, and all other explanatory materials
     │
-    ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
-    │                         generated with `pip freeze > requirements.txt`
+    ├── pyproject.toml     <- Project metadata and dependencies, managed with `uv`
     │
     └── src                <- Source code directory for the project
          ├─ __init__.py    <- Makes this src directory a Python module
@@ -33,8 +32,7 @@ Project based on the <a href="https://drivendata.github.io/cookiecutter-data-sci
 
 ## How to Use This Cookiecutter
 
-- make sure you have `cookiecutter` installed. Run `pip install -U cookiecutter`
-- Use this cookiecutter to create your project: on command line run `cookiecutter https://github.com/acornanalytics/cookiecutter-data-science`
+- no install needed with `uv`. Create your project: on command line run `uvx cookiecutter https://github.com/acornanalytics/cookiecutter-data-science`
 - Fill in the information as you are prompted
 - `cd` into your new repo directory and check out the `README.md` file for further instructions and information
 
@@ -44,7 +42,7 @@ Project based on the <a href="https://drivendata.github.io/cookiecutter-data-sci
 To contribute there are some things you need to do to get your environment set up.
 
 - clone this repo
-- run `virtualenv --python=/usr/local/bin/python3 venv`
+- run `uv sync` (the cookiecutter's own dependencies are listed in `requirements.txt`)
 
 
 ## TODOs

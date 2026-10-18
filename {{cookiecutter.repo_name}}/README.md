@@ -21,8 +21,7 @@
     │
     ├── references         <- Data dictionaries, manuals, and all other explanatory materials
     │
-    ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
-    │                         generated with `pip freeze > requirements.txt`
+    ├── pyproject.toml     <- Project metadata and dependencies, managed with `uv`
     │
     └── {{ cookiecutter.source_code_directory_name }}                <- Source code directory for the project
          ├─ __init__.py    <- Makes this src directory a Python module
@@ -30,25 +29,21 @@
          └─ utils.py       <- Where to store helper functions that do not belong in `core.py`
 ```
 
-## Installation on Mac and Linux using `virtualenv`
+## Setup
 
-- in the project directory `{{ cookiecutter.repo_name }}` run `virtualenv --python=/usr/local/bin/python3 venv`
-- activate the environment with `source venv/bin/activate`
-- edit the `.env` file and add `KEY=VALUE` for any items you wish to import (NOTE this will NOT be stored in Github. NEVER check this in to a repo!)
+This project uses [`uv`](https://docs.astral.sh/uv/) for everything: no `pip`, `virtualenv`, or `pipenv`.
 
-## Installation using `pipenv`
+- `uv sync` creates `.venv` and installs the dependencies from `pyproject.toml`
+- `uv run python {{ cookiecutter.source_code_directory_name }}/core.py` runs a script (or any other command: `uv run <command>`)
+- `uv add <package>` adds a dependency
+- create a `.env` file and add `KEY=VALUE` for any secrets you need (it is gitignored, NEVER check it in to a repo)
 
-- make sure python3 and `pipenv` is installed on your system
-- in the project directory `{{ cookiecutter.repo_name }}` run `virtualenv --python=/usr/local/bin/python3 venv`
-- edit the `.env` file and add `KEY=VALUE` for any items you wish to import (NOTE this will NOT be stored in Github. NEVER check this in to a repo!)
-- `cd` to the project directory and run `pipenv run python src/core.py` or whatever file you wish to run
+### Running Jupyter Notebooks
 
-### Running Jupyter Notebooks with `pipenv`
+- `uv run --with jupyter jupyter lab` launches the notebook browser without adding Jupyter to the project
 
-- `pipenv install ipykernel`
-- `pipenv shell`
-- `python -m ipykernel install --user`
-- `jupyter notebook` will launch the notebook browser
+## Data
 
+The contents of `data/` are never committed, only the folder structure. Keep `raw/` immutable and write derived files to `interim/` and `processed/`.
 
 <p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
