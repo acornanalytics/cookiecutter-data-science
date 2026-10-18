@@ -24,10 +24,14 @@ Project based on the <a href="https://drivendata.github.io/cookiecutter-data-sci
     │
     ├── pyproject.toml     <- Project metadata and dependencies, managed with `uv`
     │
-    └── src                <- Source code directory for the project
-         ├─ __init__.py    <- Makes this src directory a Python module
-         ├─ core.py        <- Refactored code goes here
-         └─ utils.py       <- Helper functions that do not belong in `core.py`
+    ├── src/<package>      <- Source code for the project
+    │    ├─ __init__.py    <- Makes this a Python module
+    │    ├─ core.py        <- Refactored code goes here
+    │    └─ utils.py       <- Helper functions that do not belong in `core.py`
+    │
+    ├── tests              <- pytest tests
+    ├── CLAUDE.md          <- Project conventions for Claude Code
+    └── .github/workflows  <- CI running ruff and pytest
 ```
 
 ## How to Use This Cookiecutter
@@ -42,7 +46,7 @@ Project based on the <a href="https://drivendata.github.io/cookiecutter-data-sci
 To contribute there are some things you need to do to get your environment set up.
 
 - clone this repo
-- run `uv sync` (the cookiecutter's own dependencies are listed in `requirements.txt`)
+- clone this repo and generate a test project with `uvx cookiecutter . --no-input` to check your changes
 
 
 ## TODOs

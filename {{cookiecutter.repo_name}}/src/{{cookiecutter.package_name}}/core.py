@@ -1,22 +1,15 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-"""
-core.py
+"""Core logic for {{ cookiecutter.project_name }}."""
 
-Created on {% now 'local', '%Y-%m-%d' %}
-by {{ cookiecutter.author_name }}
-{{ cookiecutter.author_email }}
-"""
-import logging as log
+import logging
 
-def main():
-    # TODO:
-    # run its processes
-    pass
+log = logging.getLogger(__name__)
+
+
+def main() -> None:
+    """Run the project's main process."""
+    log.info("TODO: run the project's main process")
+
 
 if __name__ == "__main__":
-    log.basicConfig(level=log.DEBUG,
-                    format='%(asctime)s %(message)s',
-                    datefmt="%b %d %H:%M:%S %Z")
-
+    logging.basicConfig(level=logging.INFO, format="%(asctime)s %(message)s", datefmt="%b %d %H:%M:%S")
     main()

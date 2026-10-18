@@ -23,10 +23,12 @@
     │
     ├── pyproject.toml     <- Project metadata and dependencies, managed with `uv`
     │
-    └── {{ cookiecutter.source_code_directory_name }}                <- Source code directory for the project
-         ├─ __init__.py    <- Makes this src directory a Python module
-         ├─ core.py        <- Refactored code goes here
-         └─ utils.py       <- Where to store helper functions that do not belong in `core.py`
+    ├── src/{{ cookiecutter.package_name }}   <- Source code for the project
+    │    ├─ __init__.py    <- Makes this a Python module
+    │    ├─ core.py        <- Refactored code goes here
+    │    └─ utils.py       <- Helper functions that do not belong in `core.py`
+    │
+    └── tests              <- pytest tests
 ```
 
 ## Setup
@@ -34,8 +36,9 @@
 This project uses [`uv`](https://docs.astral.sh/uv/) for everything: no `pip`, `virtualenv`, or `pipenv`.
 
 - `uv sync` creates `.venv` and installs the dependencies from `pyproject.toml`
-- `uv run python {{ cookiecutter.source_code_directory_name }}/core.py` runs a script (or any other command: `uv run <command>`)
+- `uv run python -m {{ cookiecutter.package_name }}.core` runs a script (or any other command: `uv run <command>`)
 - `uv add <package>` adds a dependency
+- `uv run pytest` runs the tests and `uv run ruff check` lints
 - create a `.env` file and add `KEY=VALUE` for any secrets you need (it is gitignored, NEVER check it in to a repo)
 
 ### Running Jupyter Notebooks
